@@ -1,7 +1,6 @@
 <?php 
 // classes, atributos e métodos
 
-use PgSql\Lob;
 
 class Pessoa {
     public $nome;
