@@ -22,6 +22,17 @@ echo $matheus->nome;
 class Login{
     private $email;
     private $senha;
+    private $nome;
+
+    public function __construct($email, $senha, $nome){
+        $this->nome = $nome;
+        $this->setEmail($email);
+        $this->setSenha($senha);
+    }
+
+    public function getNome(){
+        return $this->nome;
+    }
 
     public function getEmail(){
         return $this->email;
@@ -49,9 +60,9 @@ class Login{
     }
 }
 
-$login = new Login();
-$login->setemail("teste@teste.com");
-$login->setSenha("1234");
+$login = new Login("teste@teste.com", "1234", "Matheus Santos");
 $login->Logar();
+echo "<br>";
+echo $login->getNome();
 
 ?>
