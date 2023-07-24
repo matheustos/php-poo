@@ -1,0 +1,27 @@
+<?php 
+// Ocorrencia normal que afeta o funcionamento da aplicação
+// Exception é a classe base para todas as Exceptions
+// message, code, file, line
+
+class Newsletter{
+    public function cadastrarEmail($email){
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            throw new Exception("Este email é inválido", 1);
+        }
+        else{
+            echo "Email cadastrado com sucesso.";
+    }
+}
+}
+
+$newsletter = new Newsletter();
+
+try{
+    $newsletter->cadastrarEmail("contato@");
+} catch(Exception $e){
+    echo $e->getFile().", code ".$e->getCode();
+    echo "<br>";
+    echo $e->getMessage().", line ".$e->getLine();    
+}
+
+?>

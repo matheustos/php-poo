@@ -27,7 +27,7 @@ class Veiculo {
 
 class Carro extends Veiculo {
     public function ligarLimpador(){
-        echo "Limapando em 321";
+        echo "Limpando em 321";
     }
     public function setModelo($m){
         $this->modelo = $m;
