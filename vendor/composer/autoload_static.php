@@ -11,12 +11,20 @@ class ComposerStaticInit3a7d234d91b2c99ba713471bc4ae8bcf
         array (
             'Cocur\\Slugify\\' => 14,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Cocur\\Slugify\\' => 
         array (
             0 => __DIR__ . '/..' . '/cocur/slugify/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/App',
         ),
     );
 
